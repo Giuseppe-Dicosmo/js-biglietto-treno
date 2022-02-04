@@ -2,10 +2,6 @@
 let quantiKm = parseFloat(prompt('Ciao, puoi dirmi quanti chilometri dista La tua destinazione'));
 console.log(quantiKm);
 
-// Prezzo del biglietto in base alla distanza
-let prezzoDelBiglietto = parseFloat(quantiKm * 0.21);
-console.log(prezzoDelBiglietto);
-
 // Età dell'utente.
 if (isNaN(quantiKm)) {
   alert('we frate hai sbagliato, inserisci numero')
@@ -16,13 +12,17 @@ if (isNaN(quantiKm)) {
   if (isNaN(quantiAnni)) {
     alert('we frate hai sbagliato, inserisci numero')
   } else {
+    // Prezzo del biglietto in base alla distanza
+    let prezzoDelBiglietto = parseFloat(quantiKm * 0.21);
+    console.log(prezzoDelBiglietto);
+
     //Sconti in base all'età.
     if (quantiAnni < 18) {
-      //Sconto per i minorenni
+      //Prezzo per minorenni con sconto
       let minorenne = parseFloat(prezzoDelBiglietto * 0.80);
       console.log(minorenne);
     } else if(quantiAnni >= 65) {
-      //Sconto per anziani
+      //Prezzo per anziani con sconto
       let anziano = parseFloat(prezzoDelBiglietto * 0.60);
       console.log(anziano);
     } else {
