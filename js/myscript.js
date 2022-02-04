@@ -11,14 +11,15 @@ let quantiAnni = parseFloat(prompt('Quanti anni hai?'));
 console.log(quantiAnni);
 
 //Sconti in base all'età.
-if (quantiAnni < 18) {
+if ((quantiAnni < 18) && (quantiAnni >= 65)) {
   //Sconto per i minorenni
   let minorenne = parseFloat(prezzoDelBiglietto * 0.80);
   console.log(minorenne);
-} else if(quantiAnni >= 65) {
+
   //Sconto per anziani
   let anziano = parseFloat(prezzoDelBiglietto * 0.60);
   console.log(anziano);
+
 } else {
   //Prezzo per adulti
   let prezzoDelBiglietto = parseFloat(quantiKm * 0.21);
